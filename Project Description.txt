@@ -1,0 +1,31 @@
+### Project Description
+
+This project is an e-commerce platform designed to provide users with a seamless shopping experience. It allows customers to browse and add products to their shopping cart, apply discount coupons, and complete purchases through a simple checkout process. The platform is equipped with dynamic pricing features based on coupon application and includes a reporting system for administrators to monitor orders.
+
+### Shopping Cart Functionality
+
+Users can add products to their shopping cart, adjust quantities, and view the items they have selected. The cart page includes a dedicated section for applying discount coupons. Specifically, users can apply the "PROMO7352" coupon, which triggers special discount rules based on product quantities and categories.
+
+### Coupon-Based Discounts
+
+When the "PROMO7352" coupon is applied, several discount rules come into effect:
+- Products with a quantity greater than 3 receive a 10% discount.
+- Products with a quantity greater than 5 receive a 20% discount.
+- Products from categories with IDs 1 or 3 receive a flat discount of 100 lei, regardless of quantity, and these products are excluded from the percentage-based discount rules.
+Products that do not meet these criteria remain at their original price.
+
+### Price Overview and Display
+
+The shopping cart displays both the original and discounted prices for each product. Below the product list, the cart summarizes the total price before any discounts, the total after applying the discounts, and the total amount saved from the discounts. This allows users to see a clear breakdown of their savings.
+
+### Checkout Process
+
+The checkout page provides a final summary of the user’s order, recalculating any discounts based on applied coupons. Users can then confirm their purchase, and the order details are saved in the database. The checkout system ensures that all pricing rules are enforced before the order is completed.
+
+### Administrative Reports
+
+For administrators, the platform offers an order reporting feature. This report includes orders that contain products priced under 100 lei. Importantly, the report also accounts for products that fall below 100 lei after the application of discounts. To be included in the report, products must belong to categories with more than three products. The report provides key order information, such as order ID, customer details, and the total number of products in the order.
+
+### Database Integration
+
+The platform integrates with a relational database to store product, user, and order information. The system dynamically retrieves and processes data to apply discounts and generate reports based on real-time conditions, such as product price and category.

@@ -1,0 +1,2 @@
+Admin Email: admin@email.com
+Admin Password: parola
